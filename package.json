@@ -18,11 +18,18 @@
     "cm": "git-cz"
   },
   "dependencies": {
+    "@material-template/components": "workspace:*",
+    "@material-template/constants": "workspace:*",
+    "@material-template/directives": "workspace:*",
+    "@material-template/hooks": "workspace:*",
+    "@material-template/style": "workspace:*",
+    "@material-template/utils": "workspace:*",
     "vue": "^3.5.12"
   },
   "devDependencies": {
     "@commitlint/cli": "^19.5.0",
     "@commitlint/config-conventional": "^19.5.0",
+    "@pnpm/workspace.find-packages": "^4.0.13",
     "@tsconfig/node22": "^22.0.0",
     "@types/jsdom": "^21.1.7",
     "@types/node": "^22.9.0",
@@ -37,15 +44,15 @@
     "eslint-plugin-oxlint": "^0.11.0",
     "eslint-plugin-vue": "^9.30.0",
     "husky": "^9.1.7",
-    "lint-staged": "^15.2.10",
     "jsdom": "^25.0.1",
+    "lint-staged": "^15.2.10",
     "npm-run-all2": "^7.0.1",
     "oxlint": "^0.11.0",
     "prettier": "^3.3.3",
     "typescript": "~5.6.3",
     "vite": "^5.4.10",
     "vite-plugin-vue-devtools": "^7.5.4",
-    "vitest": "^2.1.4",
+    "vitest": "^2.1.5",
     "vue-tsc": "^2.1.10"
   },
   "lint-staged": {

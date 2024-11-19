@@ -43,3 +43,9 @@ pnpm test:unit
 ```sh
 pnpm lint
 ```
+
+### TODO:
+
+- docs
+- test
+- build

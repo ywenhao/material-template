@@ -17,11 +17,16 @@ export default [
 
   ...pluginVue.configs['flat/essential'],
   ...vueTsEslintConfig(),
-  
+
   {
     ...pluginVitest.configs.recommended,
     files: ['src/**/__tests__/*'],
   },
   oxlint.configs['flat/recommended'],
   skipFormatting,
+  {
+    rules: {
+      'vue/multi-word-component-names': 'off',
+    },
+  },
 ]
