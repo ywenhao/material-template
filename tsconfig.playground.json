@@ -1,0 +1,15 @@
+{
+  "extends": "./tsconfig.app.json",
+  "compilerOptions": {
+    "allowJs": true,
+    "lib": ["ESNext", "DOM", "DOM.Iterable"]
+  },
+  "include": [
+    "packages",
+    "typings/global.d.ts",
+
+    // playground
+    "playground/env.d.ts",
+    "playground/src/**/*"
+  ]
+}

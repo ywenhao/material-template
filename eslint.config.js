@@ -27,6 +27,7 @@ export default [
   {
     rules: {
       'vue/multi-word-component-names': 'off',
+      'no-console': ['error', { allow: ['warn', 'error', 'info'] }],
     },
   },
 ]
