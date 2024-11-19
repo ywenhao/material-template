@@ -1,0 +1,8 @@
+{
+  "name": "@material-template/style",
+  "version": "0.0.0",
+  "description": "all styles are settled here",
+  "main": "index.css",
+  "unpkg": "index.css",
+  "jsdelivr": "index.css"
+}

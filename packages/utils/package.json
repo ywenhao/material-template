@@ -1,0 +1,13 @@
+{
+  "name": "@material-template/utils",
+  "version": "0.0.0",
+  "description": "material-template utils",
+  "main": "index.ts",
+  "module": "index.ts",
+  "unpkg": "index.js",
+  "jsdelivr": "index.js",
+  "peerDependencies": {
+    "vue": "^3.5.13"
+  },
+  "types": "index.d.ts"
+}

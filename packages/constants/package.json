@@ -1,0 +1,5 @@
+{
+  "name": "@material-template/constants",
+  "private": true,
+  "main": "index.ts"
+}
