@@ -1,6 +1,6 @@
 import { fileURLToPath, URL } from 'node:url'
 
-import { ConfigEnv, defineConfig, UserConfig } from 'vite'
+import { ConfigEnv, defineConfig } from 'vite'
 import vue from '@vitejs/plugin-vue'
 import vueJsx from '@vitejs/plugin-vue-jsx'
 import { findWorkspacePackages } from '@pnpm/workspace.find-packages'
@@ -14,7 +14,7 @@ async function getMainPrefix() {
 }
 
 // https://vite.dev/config/
-export default async (configEnv: ConfigEnv) => {
+export default async (_configEnv: ConfigEnv) => {
   const mainPrefix = await getMainPrefix()
 
   return defineConfig({
