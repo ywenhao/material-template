@@ -32,4 +32,4 @@ coverage
 .eslintcache
 
 # docs
-.vitepress/cache
+docs/.vitepress/cache
