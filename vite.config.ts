@@ -1,17 +1,7 @@
-import { fileURLToPath, URL } from 'node:url'
-
 import { ConfigEnv, defineConfig } from 'vite'
 import vue from '@vitejs/plugin-vue'
 import vueJsx from '@vitejs/plugin-vue-jsx'
-import { findWorkspacePackages } from '@pnpm/workspace.find-packages'
-
-const getPath = (path: string) => fileURLToPath(new URL(path, import.meta.url))
-
-async function getMainPrefix() {
-  const list = await findWorkspacePackages(getPath('./packages'))
-  const item = list.find((item) => item.manifest?.name === 'material-template')
-  return item?.rootDir.split(/(\/packages\/|\\packages\\)/).pop()
-}
+import { getMainPrefix, getPath } from '@material-template/build-utils'
 
 // https://vite.dev/config/
 export default async (_configEnv: ConfigEnv) => {

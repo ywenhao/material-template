@@ -6,7 +6,8 @@
     "cypress.config.*",
     "nightwatch.conf.*",
     "playwright.config.*",
-    "playground/vite.config.*"
+    "playground/vite.config.*",
+    "internal"
   ],
   "compilerOptions": {
     "composite": true,

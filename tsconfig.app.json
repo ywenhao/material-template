@@ -8,7 +8,6 @@
 
     "baseUrl": ".",
     "paths": {
-      "@material-template/*": ["packages/*"],
       "material-template": ["packages/main"]
     }
   }
