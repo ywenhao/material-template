@@ -3,8 +3,8 @@
   "version": "0.0.0",
   "description": "Build constants for material-template",
   "type": "module",
-  "main": "dist/index.mjs",
-  "module": "dist/index.mjs",
+  "main": "./dist/index.mjs",
+  "module": "./dist/index.mjs",
   "types": "./dist/index.d.ts",
   "scripts": {
     "stub": "unbuild --stub"
