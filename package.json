@@ -31,8 +31,8 @@
     "vue": "^3.5.12"
   },
   "devDependencies": {
-    "@commitlint/cli": "^19.5.0",
-    "@commitlint/config-conventional": "^19.5.0",
+    "@commitlint/cli": "^19.6.0",
+    "@commitlint/config-conventional": "^19.6.0",
     "@pnpm/workspace.find-packages": "^4.0.13",
     "@tsconfig/node22": "^22.0.0",
     "@types/jsdom": "^21.1.7",
