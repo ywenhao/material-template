@@ -49,24 +49,24 @@
     "vue": "^3.2.0"
   },
   "dependencies": {
-    "@ctrl/tinycolor": "^4.1.0",
-    "@floating-ui/dom": "^1.6.13",
-    "@types/lodash": "^4.17.15",
-    "@types/lodash-es": "^4.17.12",
-    "@vueuse/core": "^12.7.0",
-    "async-validator": "^4.2.5",
-    "dayjs": "^1.11.13",
-    "escape-html": "^1.0.3",
-    "lodash": "^4.17.21",
-    "lodash-es": "^4.17.21",
-    "lodash-unified": "^1.0.3",
-    "memoize-one": "^6.0.0",
-    "normalize-wheel-es": "^1.2.0"
+    "@ctrl/tinycolor": "catalog:",
+    "@floating-ui/dom": "catalog:",
+    "@types/lodash": "catalog:",
+    "@types/lodash-es": "catalog:",
+    "@vueuse/core": "catalog:",
+    "async-validator": "catalog:",
+    "dayjs": "catalog:",
+    "escape-html": "catalog:",
+    "lodash": "catalog:",
+    "lodash-es": "catalog:",
+    "lodash-unified": "catalog:",
+    "memoize-one": "catalog:",
+    "normalize-wheel-es": "catalog:"
   },
   "devDependencies": {
     "@types/node": "*",
-    "vue": "^3.5.13",
-    "vue-router": "^4.5.0"
+    "vue": "catalog:",
+    "vue-router": "catalog:"
   },
   "browserslist": [
     "> 1%",
