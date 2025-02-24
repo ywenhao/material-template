@@ -22,7 +22,7 @@ export default defineConfigWithVueTs([
     ...pluginVitest.configs.recommended,
     files: ['packages/**/__tests__/*'],
   },
-  oxlint.configs['flat/recommended'],
+  ...oxlint.configs['flat/recommended'],
   skipFormatting,
   {
     rules: {
