@@ -1,5 +1,5 @@
 import { deleteAsync } from 'del'
 
-export function cleanTsBuildinfo() {
-  return deleteAsync('../../dist/tsconfig.*.tsbuildinfo', { force: false })
+export async function cleanTsBuildinfo() {
+  return deleteAsync('../../../dist/tsconfig.*.tsbuildinfo', { force: true })
 }
