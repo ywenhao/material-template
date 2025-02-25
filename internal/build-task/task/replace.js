@@ -1,8 +1,7 @@
-import { At_PKG_NAME, PKG_NAME } from '@material-template/build-constants'
 import { readFile, writeFile } from 'node:fs/promises'
 import { join } from 'node:path'
 import { glob } from 'tinyglobby'
-import { distPath } from '../utils/path.js'
+import { At_PKG_NAME, PKG_NAME, distPath } from '../utils/path.js'
 
 export async function replaceAlias() {
   const files = await glob(join(distPath, '**/*.ts'), { deep: true })
