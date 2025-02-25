@@ -4,7 +4,7 @@
   "description": "Build task for material-template",
   "type": "module",
   "scripts": {
-    "start": "gulp --task"
+    "start": "gulp"
   },
   "dependencies": {
     "gulp": "^5.0.0"
