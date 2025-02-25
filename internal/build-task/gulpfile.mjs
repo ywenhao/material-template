@@ -1,7 +1,10 @@
-import { series, src } from 'gulp'
-import { copyPackageJson } from './task/copy.js'
-import { withTaskName } from './utils/glup.js'
-import { parallel } from 'gulp'
+import gulp from 'gulp'
+import { cleanMainDts, cleanSourceDts, copyDts, copyMainDts, copyPackageJson } from './task/copy.js'
+import { cleanTest } from './task/test.js'
+import { replaceAlias } from './task/replace.js'
 
-const main = series(parallel(withTaskName('copy:packageJson', copyPackageJson)))
-export default main
+export default gulp.series(
+  gulp.parallel(copyPackageJson, gulp.series(copyMainDts, cleanMainDts, copyDts, cleanSourceDts)),
+  cleanTest,
+  replaceAlias,
+)
