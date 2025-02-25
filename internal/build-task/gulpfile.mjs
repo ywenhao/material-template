@@ -5,6 +5,5 @@ import { replaceAlias } from './task/replace.js'
 
 export default gulp.series(
   gulp.parallel(copyPackageJson, gulp.series(copyMainDts, cleanMainDts, copyDts, cleanSourceDts)),
-  cleanTest,
   replaceAlias,
 )
