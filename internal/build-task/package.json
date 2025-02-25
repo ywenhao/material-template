@@ -4,12 +4,13 @@
   "description": "Build task for material-template",
   "type": "module",
   "scripts": {
-    "start": "gulp --require @esbuild-kit/esm-loader -f gulpfile.ts"
+    "start": "gulp --task"
   },
   "dependencies": {
     "gulp": "^5.0.0"
   },
   "devDependencies": {
-    "@types/gulp": "^4.0.17"
+    "@types/gulp": "^4.0.17",
+    "ts-node": "^10.9.2"
   }
 }
