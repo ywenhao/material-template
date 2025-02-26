@@ -13,7 +13,7 @@ export function copyMainDts() {
 }
 
 export function cleanMainDts() {
-  return deleteAsync(join(distPath, 'types/packages/main'), { force: true })
+  return deleteAsync(join(distPath, 'types/packages/main'), { cwd: distPath, force: true })
 }
 
 export function cleanSourceDts() {
