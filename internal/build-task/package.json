@@ -7,11 +7,11 @@
     "start": "gulp"
   },
   "dependencies": {
-    "gulp": "^5.0.0"
+    "gulp": "catalog:"
   },
   "devDependencies": {
-    "@types/gulp": "^4.0.17",
-    "del": "^8.0.0",
-    "tinyglobby": "^0.2.12"
+    "@types/gulp": "catalog:",
+    "del": "catalog:",
+    "tinyglobby": "catalog:"
   }
 }
