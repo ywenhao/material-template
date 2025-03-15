@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { MtButton } from '../../dist'
+import { MtButton } from 'material-template'
 </script>
 
 <template>

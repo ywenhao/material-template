@@ -18,6 +18,7 @@
     "vue": "catalog:"
   },
   "devDependencies": {
+    "material-template": "../dist",
     "@tsconfig/node22": "catalog:",
     "@types/node": "^22.13.5",
     "@vitejs/plugin-vue": "catalog:",

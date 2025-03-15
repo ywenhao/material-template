@@ -7,6 +7,7 @@
   "module": "../../dist/build-plugins/index.mjs",
   "types": "../../dist/build-plugins/index.d.ts",
   "scripts": {
+    "dev": "unbuild --watch",
     "build": "unbuild"
   }
 }

@@ -24,6 +24,9 @@ catalogs:
     '@tsconfig/node22':
       specifier: ^22.0.0
       version: 22.0.0
+    '@types/gulp':
+      specifier: ^4.0.17
+      version: 4.0.17
     '@types/jsdom':
       specifier: ^21.1.7
       version: 21.1.7
@@ -69,6 +72,9 @@ catalogs:
     dayjs:
       specifier: ^1.11.13
       version: 1.11.13
+    del:
+      specifier: ^8.0.0
+      version: 8.0.0
     escape-html:
       specifier: ^1.0.3
       version: 1.0.3
@@ -81,6 +87,9 @@ catalogs:
     eslint-plugin-vue:
       specifier: ^9.32.0
       version: 9.32.0
+    gulp:
+      specifier: ^5.0.0
+      version: 5.0.0
     husky:
       specifier: ^9.1.7
       version: 9.1.7
@@ -114,6 +123,9 @@ catalogs:
     prettier:
       specifier: ^3.5.2
       version: 3.5.2
+    tinyglobby:
+      specifier: ^0.2.12
+      version: 0.2.12
     typescript:
       specifier: ~5.7.3
       version: 5.7.3
@@ -152,6 +164,9 @@ importers:
       '@material-template/build-constants':
         specifier: workspace:*
         version: link:internal/build-constants
+      '@material-template/build-plugins':
+        specifier: workspace:*
+        version: link:packages/build-plugins
       '@material-template/build-utils':
         specifier: workspace:*
         version: link:internal/build-utils
@@ -282,20 +297,22 @@ importers:
   internal/build-task:
     dependencies:
       gulp:
-        specifier: ^5.0.0
+        specifier: 'catalog:'
         version: 5.0.0
     devDependencies:
       '@types/gulp':
-        specifier: ^4.0.17
+        specifier: 'catalog:'
         version: 4.0.17
       del:
-        specifier: ^8.0.0
+        specifier: 'catalog:'
         version: 8.0.0
       tinyglobby:
-        specifier: ^0.2.12
+        specifier: 'catalog:'
         version: 0.2.12
 
   internal/build-utils: {}
+
+  packages/build-plugins: {}
 
   packages/components:
     dependencies:
@@ -413,6 +430,9 @@ importers:
       eslint-plugin-vue:
         specifier: 'catalog:'
         version: 9.32.0(eslint@9.21.0(jiti@2.4.2))
+      material-template:
+        specifier: ../dist
+        version: link:../dist
       npm-run-all2:
         specifier: 'catalog:'
         version: 7.0.2
