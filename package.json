@@ -4,13 +4,14 @@
   "type": "module",
   "scripts": {
     "dev": "vite build --watch",
-    "build": "pnpm run build-only && pnpm run gen-dts && pnpm run -C internal/build-task start",
+    "build": "pnpm run build-only && pnpm run gen-dts && pnpm run -C internal/build-task start && pnpm run build-plugins",
     "preview": "vite preview",
     "build-task": "pnpm run -C internal/build-task start",
     "test:unit": "vitest",
     "build-only": "vite build",
     "build-type": "run-p type-check \"build-only {@}\" --",
     "gen-dts": "vue-tsc -p tsconfig.app.json --noEmit false --declaration --emitDeclarationOnly --declarationDir dist/types",
+    "build-plugins": "pnpm run -C packages/build-plugins build",
     "stub": "pnpm run -r --parallel stub",
     "docs:dev": "pnpm run -C docs dev",
     "docs:build": "pnpm run -C docs build",
@@ -34,6 +35,7 @@
     "@material-template/hooks": "workspace:*",
     "@material-template/style": "workspace:*",
     "@material-template/utils": "workspace:*",
+    "@material-template/build-plugins": "workspace:*",
     "vue": "catalog:"
   },
   "devDependencies": {

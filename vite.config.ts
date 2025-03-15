@@ -18,6 +18,7 @@ export default async (_configEnv: ConfigEnv) => {
     build: {
       minify: true,
       rollupOptions: {
+        // 入口
         input: ['./packages/main/index.ts'],
         // 保持原样import扩展这里
         external: ['vue', '@vueuse/core'],

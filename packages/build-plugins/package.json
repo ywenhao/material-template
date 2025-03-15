@@ -1,0 +1,12 @@
+{
+  "name": "@material-template/build-plugins",
+  "version": "0.0.0",
+  "description": "material-template build-plugins",
+  "type": "module",
+  "main": "../../dist/build-plugins/index.mjs",
+  "module": "../../dist/build-plugins/index.mjs",
+  "types": "../../dist/build-plugins/index.d.ts",
+  "scripts": {
+    "build": "unbuild"
+  }
+}
