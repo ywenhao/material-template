@@ -1,15 +1,16 @@
 {
-  "extends": "./tsconfig.app.json",
-  "compilerOptions": {
-    "allowJs": true,
-    "lib": ["ESNext", "DOM", "DOM.Iterable"]
-  },
+  "extends": "@vue/tsconfig/tsconfig.dom.json",
   "include": [
-    "packages",
-    "typings/global.d.ts",
-
-    // playground
     "playground/env.d.ts",
-    "playground/src/**/*"
-  ]
+    "playground/src/**/*",
+    "playground/src/**/*.vue",
+    "playground/components.d.ts"
+  ],
+  "exclude": ["playground/src/**/__tests__/*"],
+  "compilerOptions": {
+    "tsBuildInfoFile": "./playground/node_modules/.tmp/tsconfig.app.tsbuildinfo",
+    "paths": {
+      "@/*": ["./playground/src/*"]
+    }
+  }
 }

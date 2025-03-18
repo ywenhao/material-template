@@ -53,24 +53,16 @@
     "vue": "^3.2.0"
   },
   "dependencies": {
-    "@ctrl/tinycolor": "catalog:",
-    "@floating-ui/dom": "catalog:",
-    "@types/lodash": "catalog:",
-    "@types/lodash-es": "catalog:",
-    "@vueuse/core": "catalog:",
-    "async-validator": "catalog:",
-    "dayjs": "catalog:",
-    "escape-html": "catalog:",
-    "lodash": "catalog:",
-    "lodash-es": "catalog:",
-    "lodash-unified": "catalog:",
-    "memoize-one": "catalog:",
-    "normalize-wheel-es": "catalog:"
+    "@types/lodash-es": "^4.17.15",
+    "@vueuse/core": "^12.7.0",
+    "async-validator": "^4.2.5",
+    "dayjs": "^1.11.13",
+    "lodash-es": "^4.17.21"
   },
   "devDependencies": {
     "@types/node": "*",
-    "vue": "catalog:",
-    "vue-router": "catalog:"
+    "vue": "^3.5.13",
+    "vue-router": "^4.5.0"
   },
   "browserslist": [
     "> 1%",

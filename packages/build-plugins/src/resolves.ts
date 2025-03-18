@@ -97,26 +97,21 @@ export function kebabCase(key: string) {
 //   }
 // }
 
+const prefix = 'Mt'
+
 function resolveComponent(
   name: string,
   options: ResolverOptionsResolved,
 ): ComponentInfo | undefined {
   if (options.exclude && name.match(options.exclude)) return
 
-  if (!name.match(/^El[A-Z]/)) return
+  if (!name.match(new RegExp(`^${prefix}[A-Z]`))) return
 
-  if (name.match(/^ElIcon.+/)) {
-    return {
-      name: name.replace(/^ElIcon/, ''),
-      from: '@material-template/icons-vue',
-    }
-  }
-
-  const partialName = kebabCase(name.slice(2)) // ElTableColumn -> table-column
-  const { nightly } = options
+  // const { nightly } = options
 
   return {
-    from: `material-template/lib/el-${partialName}`,
+    name,
+    from: `material-template`,
     // sideEffects: getSideEffectsLegacy(partialName, options),
   }
 }

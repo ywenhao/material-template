@@ -5,6 +5,8 @@ import { MtButton } from 'material-template'
 <template>
   <div>
     <MtButton msg="22dd">111</MtButton>
+    <!-- <mt-button msg="22dd">111</mt-button> -->
+    <RouterLink to="/">111</RouterLink>
   </div>
 </template>
 
