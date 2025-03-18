@@ -30,7 +30,10 @@
     "./global": {
       "types": "./global.d.ts"
     },
-    "./*": "./*"
+    "./*": {
+      "types": "./*/index.d.ts",
+      "import": "./index.js"
+    }
   },
   "unpkg": "dist/index.full.js",
   "jsdelivr": "dist/index.full.js",
