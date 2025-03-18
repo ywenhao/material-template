@@ -12,7 +12,7 @@ export default async (_configEnv: ConfigEnv) => {
     resolve: {
       alias: {
         '@material-template': getPath('./packages'),
-        'material-template': getPath('./packages/main'),
+        // 'material-template': getPath('./packages/main'),
       },
     },
     build: {
