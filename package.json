@@ -4,6 +4,7 @@
   "type": "module",
   "scripts": {
     "dev": "vite build --watch",
+    "dev:play": "pnpm run -C playground dev",
     "build": "pnpm run build-only && pnpm run gen-dts && pnpm run -C internal/build-task start && pnpm run build-plugins",
     "preview": "vite preview",
     "build-task": "pnpm run -C internal/build-task start",
@@ -28,6 +29,7 @@
   },
   "dependencies": {
     "@material-template/build-constants": "workspace:*",
+    "@material-template/build-plugins": "workspace:*",
     "@material-template/build-utils": "workspace:*",
     "@material-template/components": "workspace:*",
     "@material-template/constants": "workspace:*",
@@ -35,7 +37,6 @@
     "@material-template/hooks": "workspace:*",
     "@material-template/style": "workspace:*",
     "@material-template/utils": "workspace:*",
-    "@material-template/build-plugins": "workspace:*",
     "vue": "catalog:"
   },
   "devDependencies": {
@@ -63,6 +64,7 @@
     "npm-run-all2": "catalog:",
     "oxlint": "catalog:",
     "prettier": "catalog:",
+    "sass": "^1.86.0",
     "typescript": "catalog:",
     "unbuild": "catalog:",
     "vite": "catalog:",

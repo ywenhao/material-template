@@ -1,7 +1,7 @@
 {
   "extends": "@vue/tsconfig/tsconfig.dom.json",
   "include": ["typings/env.d.ts", "packages"],
-  "exclude": ["**/__tests__/*"],
+  "exclude": ["**/__tests__/*", "**/**/*.scss"],
   "compilerOptions": {
     "composite": true,
     // "tsBuildInfoFile": "./node_modules/.tmp/tsconfig.app.tsbuildinfo",

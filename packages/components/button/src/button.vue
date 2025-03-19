@@ -1,5 +1,5 @@
 <template>
-  <button @click="emit('click')">{{ props.msg }}</button>
+  <button class="mt-button" @click="emit('click')">{{ props.msg }}</button>
 </template>
 
 <script setup lang="ts">

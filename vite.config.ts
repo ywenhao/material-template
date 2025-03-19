@@ -25,11 +25,12 @@ export default async (_configEnv: ConfigEnv) => {
         preserveEntrySignatures: 'exports-only',
         output: [
           {
-            format: 'es',
+            format: 'esm',
             // 打包保持目录结构
             preserveModules: true,
             exports: 'named',
             dir: getPath('./dist'),
+            // assetFileNames: '[name].[ext]',
             entryFileNames: (chunkInfo) => {
               let name = chunkInfo.name
               if (name.startsWith(`${mainPrefix}/`)) {
