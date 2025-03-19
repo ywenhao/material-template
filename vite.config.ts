@@ -30,12 +30,25 @@ export default async (_configEnv: ConfigEnv) => {
             preserveModules: true,
             exports: 'named',
             dir: getPath('./dist'),
-            // assetFileNames: '[name].[ext]',
+            assetFileNames: (chunkInfo) => {
+              let name = chunkInfo.names[0]
+              if (name.startsWith('components/')) {
+                name = name.replace('components/', '')
+                name = name.replace('src/style/', '')
+              }
+
+              return `style/${name}`
+            },
             entryFileNames: (chunkInfo) => {
               let name = chunkInfo.name
               if (name.startsWith(`${mainPrefix}/`)) {
                 name = name.replace(`${mainPrefix}/`, '')
               }
+
+              if (!['index', '.vue'].some((v) => name.endsWith(v))) {
+                return name
+              }
+
               return name + '.js'
             },
           },
