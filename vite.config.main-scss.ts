@@ -1,22 +1,20 @@
 import { ConfigEnv, defineConfig } from 'vite'
 import vue from '@vitejs/plugin-vue'
 import vueJsx from '@vitejs/plugin-vue-jsx'
-import { getMainPrefix, getPath } from '@material-template/build-utils'
+import { getPath } from '@material-template/build-utils'
 
 // https://vite.dev/config/
 export default async (_configEnv: ConfigEnv) => {
-  const mainPrefix = await getMainPrefix()
-
   return defineConfig({
     plugins: [vue(), vueJsx()],
     resolve: {
       alias: {
         '@material-template': getPath('./packages'),
-        // 'material-template': getPath('./packages/main'),
       },
     },
     build: {
       minify: true,
+      emptyOutDir: false,
       rollupOptions: {
         // 入口
         input: ['./packages/components/index.scss'],
