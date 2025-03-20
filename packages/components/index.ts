@@ -1,3 +1,2 @@
-// import './index.scss'
-
 export * from './button'
+export * from './text'

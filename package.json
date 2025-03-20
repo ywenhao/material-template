@@ -5,11 +5,12 @@
   "scripts": {
     "dev": "vite build --watch",
     "dev:play": "pnpm run -C playground dev",
-    "build": "pnpm run build-only && pnpm run gen-dts && pnpm run -C internal/build-task start && pnpm run build-plugins",
+    "build": "pnpm run build-only && pnpm run build:main-scss && pnpm run gen-dts && pnpm run -C internal/build-task start && pnpm run build-plugins",
     "preview": "vite preview",
     "build-task": "pnpm run -C internal/build-task start",
     "test:unit": "vitest",
     "build-only": "vite build",
+    "build:main-scss": "vite build -c vite.config.main-scss.ts",
     "build-type": "run-p type-check \"build-only {@}\" --",
     "gen-dts": "vue-tsc -p tsconfig.app.json --noEmit false --declaration --emitDeclarationOnly --declarationDir dist/types",
     "build-plugins": "pnpm run -C packages/build-plugins build",
