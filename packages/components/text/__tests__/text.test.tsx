@@ -1,6 +1,6 @@
 import { describe, expect, it } from 'vitest'
 import { mount } from '@vue/test-utils'
-import Text from '../src/button.vue'
+import Text from '../src/text.vue'
 
 describe('Text.vue', () => {
   it('create', () => {
