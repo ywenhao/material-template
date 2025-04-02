@@ -57,11 +57,6 @@ export interface ResolverOptions {
    * a list of component names that have no styles, so resolving their styles file should be prevented
    */
   noStylesComponents?: string[]
-
-  /**
-   * nightly version
-   */
-  nightly?: boolean
 }
 
 type ResolverOptionsResolved = Required<Omit<ResolverOptions, 'exclude'>> &
@@ -77,26 +72,15 @@ export function kebabCase(key: string) {
 //  * @param partialName
 //  * @param options
 //  */
-// function getSideEffectsLegacy(
-//   partialName: string,
-//   options: ResolverOptionsResolved,
-// ): SideEffectsInfo | undefined {
-//   const { importStyle } = options
-//   if (!importStyle) return
-
-//   if (importStyle === 'sass') {
-//     return [
-//       'material-template/packages/theme-chalk/src/base.scss',
-//       `material-template/packages/theme-chalk/src/${partialName}.scss`,
-//     ]
-//   } else if (importStyle === true || importStyle === 'css') {
-//     return [
-//       'material-template/lib/theme-chalk/base.css',
-//       `material-template/lib/theme-chalk/el-${partialName}.css`,
-//     ]
-//   }
-// }
-
+function getSideEffects(
+  dirName: string,
+  // options: ResolverOptionsResolved,
+): SideEffectsInfo | undefined {
+  // const { importStyle } = options
+  const themeFolder = 'material-template/style'
+  // console.log({ dirName })
+  return [`${themeFolder}/${dirName}.css`]
+}
 const prefix = 'Mt'
 
 function resolveComponent(
@@ -108,11 +92,12 @@ function resolveComponent(
   if (!name.match(new RegExp(`^${prefix}[A-Z]`))) return
 
   // const { nightly } = options
-
+  const partialName = kebabCase(name.slice(2))
   return {
     name,
     from: `material-template`,
-    // sideEffects: getSideEffectsLegacy(partialName, options),
+    sideEffects: getSideEffects(partialName),
+    // sideEffects: getSideEffects(partialName, options),
   }
 }
 
@@ -131,7 +116,7 @@ function resolveDirective(
   const directive = directives[name]
   if (!directive) return
 
-  const { nightly } = options
+  // const { nightly } = options
 
   // >=1.1.0-beta.1
   // if (compare(version, '1.1.0-beta.1', '>=') || nightly) {
@@ -158,7 +143,7 @@ export function Resolvers(options: ResolverOptions = {}): ComponentResolver[] {
       directives: true,
       exclude: undefined,
       noStylesComponents: options.noStylesComponents || [],
-      nightly: false,
+      // nightly: false,
       ...options,
     }
     return optionsResolved

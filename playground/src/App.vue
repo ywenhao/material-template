@@ -1,5 +1,7 @@
 <script setup lang="ts">
+import 'material-template/style/button.css'
 // import { MtButton } from 'material-template/components'
+// import 'material-template/style/button.css'
 </script>
 
 <template>
@@ -10,4 +12,6 @@
   </div>
 </template>
 
-<style scoped></style>
+<style scoped lang="scss">
+// @import './assets/main.css';
+</style>

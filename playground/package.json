@@ -18,7 +18,6 @@
     "vue": "catalog:"
   },
   "devDependencies": {
-    "material-template": "../dist",
     "@tsconfig/node22": "catalog:",
     "@types/node": "^22.13.5",
     "@vitejs/plugin-vue": "catalog:",
@@ -29,10 +28,12 @@
     "eslint": "catalog:",
     "eslint-plugin-oxlint": "catalog:",
     "eslint-plugin-vue": "catalog:",
+    "material-template": "../dist",
     "npm-run-all2": "catalog:",
     "oxlint": "catalog:",
     "prettier": "catalog:",
     "typescript": "catalog:",
+    "unplugin-vue-components": "^28.4.1",
     "vite": "catalog:",
     "vite-plugin-vue-devtools": "catalog:",
     "vue-tsc": "catalog:"
