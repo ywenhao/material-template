@@ -6,7 +6,7 @@
     "playground/src/**/*.vue",
     "playground/components.d.ts"
   ],
-  "exclude": ["playground/src/**/__tests__/*"],
+  "exclude": ["playground/src/**/__tests__/*", "packages"],
   "compilerOptions": {
     "tsBuildInfoFile": "./playground/node_modules/.tmp/tsconfig.app.tsbuildinfo",
     "paths": {
