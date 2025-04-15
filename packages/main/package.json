@@ -30,6 +30,7 @@
     "./global": {
       "types": "./global.d.ts"
     },
+    "./style/*": "./style/*",
     "./*": {
       "types": "./*/index.d.ts",
       "import": "./index.js"
@@ -47,8 +48,8 @@
   "style": "dist/index.css",
   "sideEffects": [
     "dist/*",
-    "theme-chalk/**/*.css",
-    "theme-chalk/src/**/*.scss",
+    "style/**/*.css",
+    "style/src/**/*.scss",
     "es/components/*/style/*",
     "lib/components/*/style/*"
   ],

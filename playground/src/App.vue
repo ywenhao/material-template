@@ -1,7 +1,17 @@
 <script setup lang="ts">
-import 'material-template/style/button.css'
-// import { MtButton } from 'material-template/components'
-// import 'material-template/style/button.css'
+// import 'material-template/style/index.css'
+
+// import { MtButton } from 'material-template'
+// import 'material-template/style/button/index.css'
+
+// async function test() {
+//   try {
+//     console.log(await import('material-template/style/index.css'))
+//   } catch (error) {
+//     console.log(error)
+//   }
+// }
+// test()
 </script>
 
 <template>

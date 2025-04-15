@@ -78,8 +78,7 @@ function getSideEffects(
 ): SideEffectsInfo | undefined {
   // const { importStyle } = options
   const themeFolder = 'material-template/style'
-  // console.log({ dirName })
-  return [`${themeFolder}/${dirName}.css`]
+  return [`${themeFolder}/${dirName}/index.css`]
 }
 const prefix = 'Mt'
 
