@@ -1,5 +1,6 @@
 {
   "name": "material-template",
+  "type": "module",
   "version": "0.0.0",
   "description": "A Component Library for Vue 3",
   "keywords": [
@@ -25,7 +26,7 @@
     },
     "./build-plugins": {
       "types": "./build-plugins/index.d.ts",
-      "import": "./build-plugins/index.mjs"
+      "import": "./build-plugins/index.js"
     },
     "./global": {
       "types": "./global.d.ts"

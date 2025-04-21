@@ -3,10 +3,10 @@
   "version": "0.0.0",
   "description": "Build constants for material-template",
   "type": "module",
-  "main": "./dist/index.mjs",
-  "module": "./dist/index.mjs",
+  "main": "./dist/index.js",
+  "module": "./dist/index.js",
   "types": "./dist/index.d.ts",
   "scripts": {
-    "stub": "unbuild --stub"
+    "stub": "tsdown"
   }
 }

@@ -66,8 +66,8 @@
     "oxlint": "catalog:",
     "prettier": "catalog:",
     "sass": "^1.86.0",
+    "tsdown": "^0.9.1",
     "typescript": "catalog:",
-    "unbuild": "catalog:",
     "vite": "catalog:",
     "vitest": "catalog:",
     "vue-tsc": "catalog:"
