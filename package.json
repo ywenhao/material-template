@@ -66,7 +66,7 @@
     "oxlint": "catalog:",
     "prettier": "catalog:",
     "sass": "^1.86.0",
-    "tsdown": "^0.9.3",
+    "tsdown": "^0.9.7",
     "typescript": "catalog:",
     "vite": "catalog:",
     "vitest": "catalog:",
