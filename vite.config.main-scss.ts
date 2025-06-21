@@ -28,13 +28,16 @@ export default async (_configEnv: ConfigEnv) => {
             exports: 'named',
             dir: getPath('./dist'),
             assetFileNames: (chunkInfo) => {
-              let name = chunkInfo.names[0]
-              if (name.startsWith('components/')) {
-                name = name.replace('components/', '')
-                name = name.replace('src/style/', '')
+              let originalFileName = chunkInfo.originalFileNames[0]
+              if (originalFileName) {
+                originalFileName = originalFileName
+                  .replace('packages/', '')
+                  .replace('components/', '')
+                  .replace('src/style/', '')
+                  .replace('.scss', '.css')
               }
 
-              return `style/${name}`
+              return `style/${originalFileName}`
             },
           },
         ],

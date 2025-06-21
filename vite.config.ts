@@ -1,11 +1,11 @@
 import { ConfigEnv, defineConfig } from 'vite'
 import vue from '@vitejs/plugin-vue'
 import vueJsx from '@vitejs/plugin-vue-jsx'
-import { getMainPrefix, getPath } from '@material-template/build-utils'
+import { getPath } from '@material-template/build-utils'
 
 // https://vite.dev/config/
 export default async (_configEnv: ConfigEnv) => {
-  const mainPrefix = await getMainPrefix()
+  // const mainPrefix = await getMainPrefix()
 
   return defineConfig({
     plugins: [vue(), vueJsx()],
@@ -31,25 +31,33 @@ export default async (_configEnv: ConfigEnv) => {
             exports: 'named',
             dir: getPath('./dist'),
             assetFileNames: (chunkInfo) => {
-              let name = chunkInfo.names[0]
-              if (name.startsWith('components/')) {
-                name = name.replace('components/', '')
-                name = name.replace('src/style/', '')
+              let originalFileName = chunkInfo.originalFileNames[0]
+              if (originalFileName) {
+                originalFileName = originalFileName
+                  .replace('packages/', '')
+                  .replace('components/', '')
+                  .replace('src/style/', '')
+                  .replace('.scss', '.css')
               }
 
-              return `style/${name}`
+              return `style/${originalFileName}`
             },
             entryFileNames: (chunkInfo) => {
-              let name = chunkInfo.name
-              if (name.startsWith(`${mainPrefix}/`)) {
-                name = name.replace(`${mainPrefix}/`, '')
+              const name = chunkInfo.name
+              let facadeModuleId = chunkInfo.facadeModuleId
+              // main入口
+              if (facadeModuleId?.includes('/packages/main')) {
+                facadeModuleId = facadeModuleId.replace('/packages/main', '/packages')
               }
 
-              if (!['index', '.vue'].some((v) => name.endsWith(v))) {
-                return name
+              if (facadeModuleId) {
+                facadeModuleId = facadeModuleId.split('/packages/')[1]
               }
 
-              return name + '.js'
+              const dirs = (facadeModuleId ?? '').split('/')
+              dirs.pop()
+              const dir = dirs.join('/')
+              return `${dir ? dir + '/' : ''}${name}.js`
             },
           },
         ],
