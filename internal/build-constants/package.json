@@ -3,9 +3,9 @@
   "version": "0.0.0",
   "description": "Build constants for material-template",
   "type": "module",
-  "main": "./dist/index.js",
-  "module": "./dist/index.js",
-  "types": "./dist/index.d.ts",
+  "main": "./dist/index.mjs",
+  "module": "./dist/index.mjs",
+  "types": "./dist/index.d.mts",
   "scripts": {
     "stub": "tsdown"
   },

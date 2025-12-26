@@ -3,9 +3,9 @@
   "version": "0.0.0",
   "description": "material-template build-plugins",
   "type": "module",
-  "main": "../../dist/build-plugins/index.js",
-  "module": "../../dist/build-plugins/index.js",
-  "types": "../../dist/build-plugins/index.d.ts",
+  "main": "../../dist/build-plugins/index.mjs",
+  "module": "../../dist/build-plugins/index.mjs",
+  "types": "../../dist/build-plugins/index.d.mts",
   "scripts": {
     "dev": "tsdown --watch",
     "build": "tsdown"
