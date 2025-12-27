@@ -1,14 +1,13 @@
 {
   "name": "material-template",
-  "type": "module",
   "version": "0.0.0",
   "description": "A Component Library for Vue 3",
   "keywords": [
-    "material-template",
-    "element",
     "component library",
-    "ui framework",
+    "element",
+    "material-template",
     "ui",
+    "ui framework",
     "vue"
   ],
   "homepage": "https://github.com/ywenhao/material-template",
@@ -16,9 +15,24 @@
     "url": "https://github.com/ywenhao/material-template/issues"
   },
   "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ywenhao/material-template.git"
+  },
+  "style": "dist/index.css",
+  "type": "module",
+  "sideEffects": [
+    "dist/*",
+    "style/**/*.css",
+    "style/src/**/*.scss",
+    "es/components/*/style/*",
+    "lib/components/*/style/*"
+  ],
   "main": "index.js",
   "module": "index.js",
   "types": "index.d.ts",
+  "unpkg": "dist/index.full.js",
+  "jsdelivr": "dist/index.full.js",
   "exports": {
     ".": {
       "types": "./index.d.ts",
@@ -37,36 +51,22 @@
       "import": "./index.js"
     }
   },
-  "unpkg": "dist/index.full.js",
-  "jsdelivr": "dist/index.full.js",
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/ywenhao/material-template.git"
-  },
   "publishConfig": {
     "access": "public"
   },
-  "style": "dist/index.css",
-  "sideEffects": [
-    "dist/*",
-    "style/**/*.css",
-    "style/src/**/*.scss",
-    "es/components/*/style/*",
-    "lib/components/*/style/*"
-  ],
-  "peerDependencies": {
-    "vue": "^3.2.0"
-  },
   "dependencies": {
-    "@types/lodash-es": "^4.17.12",
-    "@vueuse/core": "^14.1.0",
-    "dayjs": "^1.11.19",
-    "lodash-es": "^4.17.22"
+    "@types/lodash-es": "catalog:",
+    "@vueuse/core": "catalog:",
+    "dayjs": "catalog:",
+    "lodash-es": "catalog:"
   },
   "devDependencies": {
     "@types/node": "*",
-    "vue": "^3.5.26",
-    "vue-router": "^4.6.4"
+    "vue": "catalog:",
+    "vue-router": "catalog:"
+  },
+  "peerDependencies": {
+    "vue": "^3.2.0"
   },
   "browserslist": [
     "> 1%",

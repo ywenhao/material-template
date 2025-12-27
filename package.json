@@ -1,6 +1,5 @@
 {
   "private": true,
-  "packageManager": "pnpm@10.26.2",
   "type": "module",
   "scripts": {
     "dev": "vite build --watch",
@@ -44,29 +43,20 @@
   "devDependencies": {
     "@commitlint/cli": "catalog:",
     "@commitlint/config-conventional": "catalog:",
-    "@pnpm/workspace.find-packages": "catalog:",
     "@tsconfig/node22": "catalog:",
     "@types/jsdom": "catalog:",
     "@types/node": "^25.0.3",
-    "@vitejs/plugin-vue": "catalog:",
-    "@vitejs/plugin-vue-jsx": "catalog:",
-    "@vitest/eslint-plugin": "catalog:",
-    "@vue/eslint-config-prettier": "catalog:",
-    "@vue/eslint-config-typescript": "catalog:",
     "@vue/test-utils": "catalog:",
     "@vue/tsconfig": "catalog:",
     "commitizen": "catalog:",
     "cz-git": "catalog:",
-    "eslint": "catalog:",
-    "eslint-plugin-oxlint": "catalog:",
-    "eslint-plugin-vue": "catalog:",
     "husky": "catalog:",
     "jsdom": "catalog:",
     "lint-staged": "catalog:",
     "npm-run-all2": "catalog:",
+    "oxfmt": "catalog:",
     "oxlint": "catalog:",
-    "prettier": "catalog:",
-    "sass": "^1.97.1",
+    "sass": "catalog:",
     "tsdown": "catalog:",
     "typescript": "catalog:",
     "vite": "catalog:",
@@ -75,7 +65,10 @@
   },
   "lint-staged": {
     "*.{js,ts,vue,jsx,tsx}": [
-      "eslint --cache --fix"
+      "oxlint --fix"
+    ],
+    "*.{css,scss,md,json,mdx,js,ts,vue,jsx,tsx}": [
+      "oxfmt --write"
     ]
   },
   "config": {
@@ -83,6 +76,7 @@
       "path": "node_modules/cz-git"
     }
   },
+  "packageManager": "pnpm@10.26.2",
   "pnpm": {
     "onlyBuiltDependencies": [
       "@parcel/watcher",
