@@ -100,32 +100,32 @@ function resolveComponent(
   }
 }
 
-function resolveDirective(
-  name: string,
-  options: ResolverOptionsResolved,
-): ComponentInfo | undefined {
-  if (!options.directives) return
+// function resolveDirective(
+//   name: string,
+//   options: ResolverOptionsResolved,
+// ): ComponentInfo | undefined {
+//   if (!options.directives) return
 
-  const directives: Record<string, { importName: string; styleName: string }> = {
-    Loading: { importName: 'ElLoadingDirective', styleName: 'loading' },
-    Popover: { importName: 'ElPopoverDirective', styleName: 'popover' },
-    InfiniteScroll: { importName: 'ElInfiniteScroll', styleName: 'infinite-scroll' },
-  }
+//   const directives: Record<string, { importName: string; styleName: string }> = {
+//     Loading: { importName: 'ElLoadingDirective', styleName: 'loading' },
+//     Popover: { importName: 'ElPopoverDirective', styleName: 'popover' },
+//     InfiniteScroll: { importName: 'ElInfiniteScroll', styleName: 'infinite-scroll' },
+//   }
 
-  const directive = directives[name]
-  if (!directive) return
+//   const directive = directives[name]
+//   if (!directive) return
 
-  // const { nightly } = options
+//   // const { nightly } = options
 
-  // >=1.1.0-beta.1
-  // if (compare(version, '1.1.0-beta.1', '>=') || nightly) {
-  //   return {
-  //     name: directive.importName,
-  //     from: `${nightly ? '@material-template/nightly' : 'material-template'}/${ssr ? 'lib' : 'es'}`,
-  //     sideEffects: getSideEffects(directive.styleName, options),
-  //   }
-  // }
-}
+//   // >=1.1.0-beta.1
+//   // if (compare(version, '1.1.0-beta.1', '>=') || nightly) {
+//   //   return {
+//   //     name: directive.importName,
+//   //     from: `${nightly ? '@material-template/nightly' : 'material-template'}/${ssr ? 'lib' : 'es'}`,
+//   //     sideEffects: getSideEffects(directive.styleName, options),
+//   //   }
+//   // }
+// }
 
 const noStylesComponents: string[] = []
 

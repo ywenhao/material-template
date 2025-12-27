@@ -2,13 +2,13 @@
   "name": "@material-template/components",
   "version": "0.0.0",
   "description": "material-template components",
+  "sideEffects": false,
   "main": "index.ts",
   "module": "index.ts",
+  "types": "index.d.ts",
   "unpkg": "index.js",
   "jsdelivr": "index.js",
   "peerDependencies": {
     "vue": "^ 3.5.13"
-  },
-  "types": "index.d.ts",
-  "sideEffects": false
+  }
 }

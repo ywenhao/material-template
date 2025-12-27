@@ -1,0 +1,8 @@
+{
+  "$schema": "./node_modules/oxlint/configuration_schema.json",
+  "ignorePatterns": ["dist", "node_modules", ".vscode/extensions.json", "pnpm-workspace.yaml"],
+  "rules": {
+    "no-console": "allow",
+    "allow": ["warn", "error", "info"]
+  }
+}
