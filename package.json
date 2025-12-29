@@ -21,7 +21,7 @@
     "type-check": "vue-tsc --build",
     "lint:fix": "oxlint . --fix -D correctness --ignore-path .gitignore",
     "lint": "oxlint",
-    "format": "oxfmt",
+    "format": "oxfmt --write",
     "prepare": "husky",
     "postinstall": "pnpm stub && pnpm stub-after",
     "lint-staged": "lint-staged",
