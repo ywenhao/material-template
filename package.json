@@ -45,6 +45,8 @@
     "@tsconfig/node22": "catalog:",
     "@types/jsdom": "catalog:",
     "@types/node": "^25.0.3",
+    "@vitejs/plugin-vue": "catalog:",
+    "@vitejs/plugin-vue-jsx": "catalog:",
     "@vue/test-utils": "catalog:",
     "@vue/tsconfig": "catalog:",
     "commitizen": "catalog:",
