@@ -3,8 +3,8 @@
 layout: home
 
 hero:
-  name: "material-template"
-  text: "material-template"
+  name: 'material-template'
+  text: 'material-template'
   tagline: My great project tagline
   actions:
     - theme: brand

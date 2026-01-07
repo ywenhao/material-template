@@ -37,8 +37,8 @@ catalog:
   memoize-one: ^6.0.0
   normalize-wheel-es: ^1.2.0
   npm-run-all2: ^8.0.4
-  oxfmt: ^0.21.0
-  oxlint: ^1.36.0
+  oxfmt: ^0.23.0
+  oxlint: ^1.38.0
   sass: ^1.97.1
   tinyglobby: ^0.2.15
   tsdown: ^0.18.3
