@@ -19,7 +19,7 @@
   },
   "devDependencies": {
     "@tsconfig/node22": "catalog:",
-    "@types/node": "^25.1.0",
+    "@types/node": "^25.2.3",
     "@vitejs/plugin-vue": "catalog:",
     "@vitejs/plugin-vue-jsx": "catalog:",
     "@vue/eslint-config-prettier": "catalog:",
