@@ -5,7 +5,9 @@ export default defineConfig({
   clean: true,
   dts: true,
   tsconfig: false,
-  external: ['vite'],
+  deps: {
+    neverBundle: ['vite'],
+  },
   outDir: '../../dist/build-plugins',
   format: ['esm'],
 })

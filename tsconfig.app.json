@@ -6,9 +6,8 @@
     "composite": true,
     // "tsBuildInfoFile": "./node_modules/.tmp/tsconfig.app.tsbuildinfo",
     "outDir": "dist",
-    "baseUrl": ".",
     "paths": {
-      "material-template": ["packages/main"]
+      "material-template": ["./packages/main"]
     }
   }
 }

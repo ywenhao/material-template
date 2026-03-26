@@ -11,6 +11,7 @@
   },
   "devDependencies": {
     "@types/gulp": "catalog:",
+    "del": "catalog:",
     "tinyglobby": "catalog:"
   }
 }
