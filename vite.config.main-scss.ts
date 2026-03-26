@@ -1,4 +1,4 @@
-import { ConfigEnv, defineConfig } from 'vite'
+import { ConfigEnv, defineConfig } from 'vite-plus'
 import vue from '@vitejs/plugin-vue'
 import vueJsx from '@vitejs/plugin-vue-jsx'
 import { getPath } from '@material-template/build-utils'

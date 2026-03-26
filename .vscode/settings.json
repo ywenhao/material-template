@@ -34,5 +34,7 @@
   "[scss]": {
     "editor.defaultFormatter": "oxc.oxc-vscode"
   },
-  "cSpell.words": ["tsdown"]
+  "cSpell.words": ["tsdown"],
+  "oxc.fmt.configPath": "./vite.config.ts",
+  "editor.formatOnSaveMode": "file"
 }

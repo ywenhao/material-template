@@ -3,6 +3,7 @@
     "Vue.volar",
     "vitest.explorer",
     "EditorConfig.EditorConfig",
-    "oxc.oxc-vscode"
+    "oxc.oxc-vscode",
+    "VoidZero.vite-plus-extension-pack"
   ]
 }

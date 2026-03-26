@@ -2,14 +2,14 @@
   "private": true,
   "type": "module",
   "scripts": {
-    "dev": "vite build --watch",
+    "dev": "vp build --watch",
     "dev:play": "pnpm run -C playground dev",
     "build": "pnpm run build-only && pnpm run build:main-scss && pnpm run gen-dts && pnpm run -C internal/build-task start && pnpm run build-plugins",
-    "preview": "vite preview",
+    "preview": "vp preview",
     "build-task": "pnpm run -C internal/build-task start",
-    "test:unit": "vitest",
-    "build-only": "vite build",
-    "build:main-scss": "vite build -c vite.config.main-scss.ts",
+    "test:unit": "vp test",
+    "build-only": "vp build",
+    "build:main-scss": "vp build -c vite.config.main-scss.ts",
     "build-type": "run-p type-check \"build-only {@}\" --",
     "gen-dts": "vue-tsc -p tsconfig.app.json --noEmit false --declaration --emitDeclarationOnly --declarationDir dist/types",
     "build-plugins": "pnpm run -C packages/build-plugins build",
@@ -19,9 +19,9 @@
     "docs:build": "pnpm run -C docs build",
     "docs:preview": "pnpm run -C docs preview",
     "type-check": "vue-tsc --build",
-    "lint:fix": "oxlint . --fix -D correctness --ignore-path .gitignore",
-    "lint": "oxlint",
-    "format": "oxfmt --write",
+    "lint:fix": "vp lint . --fix -D correctness --ignore-path .gitignore",
+    "lint": "vp lint",
+    "format": "vp fmt --write",
     "prepare": "husky",
     "postinstall": "pnpm stub && pnpm stub-after",
     "lint-staged": "lint-staged",
@@ -55,21 +55,19 @@
     "jsdom": "catalog:",
     "lint-staged": "catalog:",
     "npm-run-all2": "catalog:",
-    "oxfmt": "catalog:",
-    "oxlint": "catalog:",
     "sass": "catalog:",
-    "tsdown": "catalog:",
     "typescript": "catalog:",
     "vite": "catalog:",
+    "vite-plus": "catalog:",
     "vitest": "catalog:",
     "vue-tsc": "catalog:"
   },
   "lint-staged": {
     "*.{js,ts,vue,jsx,tsx}": [
-      "oxlint --fix"
+      "vp lint --fix"
     ],
     "*.{css,scss,md,json,mdx,js,ts,vue,jsx,tsx}": [
-      "oxfmt --write"
+      "vp fmt --write"
     ]
   },
   "config": {

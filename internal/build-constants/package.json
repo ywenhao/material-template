@@ -7,9 +7,9 @@
   "module": "./dist/index.mjs",
   "types": "./dist/index.d.mts",
   "scripts": {
-    "stub": "tsdown"
+    "stub": "vp pack"
   },
   "devDependencies": {
-    "tsdown": "catalog:"
+    "vite-plus": "catalog:"
   }
 }

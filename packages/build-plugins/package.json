@@ -7,10 +7,10 @@
   "module": "../../dist/build-plugins/index.mjs",
   "types": "../../dist/build-plugins/index.d.mts",
   "scripts": {
-    "dev": "tsdown --watch",
-    "build": "tsdown"
+    "dev": "vp pack --watch",
+    "build": "vp pack"
   },
   "devDependencies": {
-    "tsdown": "catalog:"
+    "vite-plus": "catalog:"
   }
 }
