@@ -18,9 +18,20 @@ See [Vite Configuration Reference](https://vite.dev/config/).
 
 ```sh
 pnpm install
+pnpm build
 ```
 
+The workspace uses `typescript-native-bridge`: the TypeScript 6-compatible JavaScript API is backed by the TypeScript 7.0.2 Go checker. Keep the `typescript` entries in `catalog` and `overrides` in `pnpm-workspace.yaml` aligned when upgrading the bridge.
+
 ### Compile and Hot-Reload for Development
+
+Build the library once before starting the playground, which imports the local `dist` output:
+
+```sh
+pnpm dev:play
+```
+
+To rebuild the library on source changes, run this in a second terminal:
 
 ```sh
 pnpm dev
@@ -30,7 +41,11 @@ pnpm dev
 
 ```sh
 pnpm build
+pnpm -C playground build
+pnpm docs:build
 ```
+
+The build runs JavaScript, styles, declaration generation, package assembly, and build plugins in sequence. Package assembly runs as TypeScript directly on Node 24 using built-in file APIs. It copies package metadata in parallel with declaration preparation, then rewrites aliases and removes temporary build info in sequence.
 
 ### Run Unit Tests with [Vitest](https://vitest.dev/)
 

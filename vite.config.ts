@@ -28,6 +28,7 @@ export default async (_configEnv: ConfigEnv) => {
             format: 'esm',
             // 打包保持目录结构
             preserveModules: true,
+            preserveModulesRoot: getPath('./packages'),
             exports: 'named',
             dir: getPath('./dist'),
             assetFileNames: (chunkInfo) => {
@@ -42,23 +43,10 @@ export default async (_configEnv: ConfigEnv) => {
 
               return `style/${originalFileName}`
             },
-            entryFileNames: (chunkInfo) => {
-              const name = chunkInfo.name
-              let facadeModuleId = chunkInfo.facadeModuleId
-              // main入口
-              if (facadeModuleId?.includes('/packages/main')) {
-                facadeModuleId = facadeModuleId.replace('/packages/main', '/packages')
-              }
-
-              if (facadeModuleId) {
-                facadeModuleId = facadeModuleId.split('/packages/')[1]
-              }
-
-              const dirs = (facadeModuleId ?? '').split('/')
-              dirs.pop()
-              const dir = dirs.join('/')
-              return `${dir ? dir + '/' : ''}${name}.js`
-            },
+            entryFileNames: (chunkInfo) =>
+              chunkInfo.facadeModuleId === getPath('./packages/main/index.ts')
+                ? 'index.js'
+                : '[name].js',
           },
         ],
       },

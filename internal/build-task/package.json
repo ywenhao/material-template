@@ -4,14 +4,6 @@
   "description": "Build task for material-template",
   "type": "module",
   "scripts": {
-    "start": "gulp"
-  },
-  "dependencies": {
-    "gulp": "catalog:"
-  },
-  "devDependencies": {
-    "@types/gulp": "catalog:",
-    "del": "catalog:",
-    "tinyglobby": "catalog:"
+    "start": "node build-package.ts"
   }
 }

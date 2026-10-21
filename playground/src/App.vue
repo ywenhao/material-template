@@ -18,7 +18,7 @@
   <div>
     <MtButton msg="22dd">111</MtButton>
     <!-- <mt-button msg="22dd">111</mt-button> -->
-    <RouterLink to="/">111</RouterLink>
+    <a href="/">111</a>
   </div>
 </template>
 
